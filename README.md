@@ -15,4 +15,4 @@ Local are network, and a 4G , 5G testbed were configured to constitute the netwo
 
 **The Slave Domain**
 
-This is the remote teleoperator site that actuates the commands receieved from the master domain. It constitutes a robotic arm and a controller. This site comprised an Adeept 4DoF rasparm and a Raspberry Pi controller
+This is the remote teleoperator site that actuates the commands receieved from the master domain. It constitutes a robotic arm and a controller. This site comprised an Adeept 4DoF rasparm, a grove vibration sensor, and a Raspberry Pi controller
