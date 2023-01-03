@@ -6,7 +6,17 @@
 #include <sys/socket.h>
 #include <unistd.h>
 #include <iostream>
-#define PORT <>
+#define PORT 8080
+#include <chrono>
+#include <iostream>
+#include <sys/time.h>
+#include <ctime>
+//These are time libraries to enable the calculation of timestamps in milliseconds since epoch
+using std::cout; using std::endl;
+using std::chrono::duration_cast;
+using std::chrono::milliseconds;
+using std::chrono::seconds;
+using std::chrono::system_clock;
 
 int main(int argc, char const* argv[])
 {
@@ -16,7 +26,6 @@ int main(int argc, char const* argv[])
 	char buffer[1024] = { 0 };
     while (true)
       {
-        //printf("trying to connect \n"); 
         if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
 		printf("\n Socket creation error \n");
 		return -1;	}
@@ -43,7 +52,10 @@ int main(int argc, char const* argv[])
         while ((valread=read(sock,buffer, sizeof(buffer)-1)) > 0)
 	{
 		buffer[valread] = 0;
-                std::cout << buffer;        
+		// Append current timestamp to the values received
+	                std::cout << buffer;
+                auto millisec_since_epoch = duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();
+                cout << "time: " << millisec_since_epoch << endl;        
      	}
 	close(sock);
       }
