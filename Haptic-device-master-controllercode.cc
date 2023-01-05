@@ -21,7 +21,7 @@
 #include <sys/time.h>
 #include <ctime>
 
-**//Enable logging of timestamps in milliseconds since epoch**
+//Enable logging of timestamps in milliseconds since epoch**
 using std::cout; using std::endl;
 using std::chrono::duration_cast;
 using std::chrono::milliseconds;
