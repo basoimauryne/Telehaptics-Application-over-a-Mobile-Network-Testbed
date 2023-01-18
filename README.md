@@ -1,4 +1,4 @@
-# Telehaptics-Application-over-a-Mobile-Network-Testbed
+# Development and Operation of Telehaptics-System-over-a-Local Area Netwok and Mobile-Network-Testbed
 This repository entails the  source codes for the developed telehaptics system, instruction guides, and sample raw results achieved from the system evaluation over the 4G mobile network testbed.
 The developed telehaptics sytem entails the master,network, and slave domains.
 
