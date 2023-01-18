@@ -11,7 +11,7 @@ A 3D Touch Haptic device, Ubuntu OS computer,Raspberry Pi Model B, grove vibrati
 **The Network Domain**
 
 This domain provides the network infrastructure that couples the master and the slave domain, allowing the exchange of data and energy. Furthermore, this coupling results in a closed communication loop where data flows between the master and the slave controllers, simultaneously.
-Local are network, and a 4G , 5G testbed were configured to constitute the network domain.
+Local area network, and a 4G , 5G testbed were configured to constitute the network domain.
 
 **The Slave Domain**
 
