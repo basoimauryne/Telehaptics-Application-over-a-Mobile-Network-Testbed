@@ -9,7 +9,7 @@ port="PORT"
 # Create a TCP socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-# Bind the socket to the port
+# Bind the address to the port
 server_address = (ip, port)
 s.bind(server_address)
 #GPIO pin that connects with the vibration motor
@@ -25,6 +25,7 @@ def vibrate():
        
        connectionSocket, addr = s.accept()
        data = connectionSocket.recv(1024)
+       #convert recieved data to acceptable format
        strings = data.decode('utf8')
        value = int(strings)
        # 1 is presence of vibration, 0 is no vibrations received
@@ -34,6 +35,7 @@ def vibrate():
            GPIO.output(vibration_pin, GPIO.LOW)
        else:
            current_time= round(time.time()*1000)
+           # label the packet
            print(current_time,"packet_label:",value)
        connectionSocket.send(data)
        connectionSocket.close()
