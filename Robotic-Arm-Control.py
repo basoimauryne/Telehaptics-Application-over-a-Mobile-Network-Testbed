@@ -17,7 +17,7 @@ dict={}
 # Read values sent from robotic arm 
 p = Popen([program_path], stdout=PIPE, stdin=PIPE, universal_newlines=True)
 #This is initializing the minimum position values for the 4DOF robotic arm motors in every axis
-xaxis=100x
+xaxis=100
 yaxis1=100
 yaxis2=100
 zaxis=100
