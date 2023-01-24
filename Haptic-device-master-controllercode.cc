@@ -661,6 +661,9 @@ void updateHaptics(void)
                 //Increment counter index and append packet label to the X,Y,Z axes position values
                 counter+=1;
                 cout << "label: " << counter;
+                cout << "xaxis: " << finalx;
+                cout << "yaxis: " << finaly;
+                cout << "zaxis: " << finalz;
                 cout << " ";
       
                 hapticDevicePosition = position;
